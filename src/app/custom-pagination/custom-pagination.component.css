@@ -1,0 +1,22 @@
+.table-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+td:nth-child(3) {
+    width: 400px;
+}
+tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+
+.button-container {
+    position: fixed;
+    top: 450px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+    margin-top: 50px;
+}

@@ -1,0 +1,17 @@
+<div class="table-container">
+    <table>
+        <tr>
+            <th>USER ID</th>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>COMPLETED</th>
+        </tr>
+        <tr *ngFor="let data of paginatedData | paginate: {itemsPerPage: 10, currentPage: p}">
+            <td>{{data.userId}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td [style.color]="data.completed | completedStatus | uppercase">{{data.completed }}</td>
+        </tr>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
